@@ -14,19 +14,19 @@ public class Lander : MonoBehaviour
     {
          if (Keyboard.current.upArrowKey.isPressed)
         {
-            _playerLander.addForce(new Vector2(transform.up));
+            _playerLander.addForce((transform.up));
         }
         if (Keyboard.current.downArrowKey.isPressed)
         {
-            Debug.Log("Down Arrow Key is Pressed");
+            _playerLander.addForce((transform.down));
         }
         if (Keyboard.current.leftArrowKey.isPressed)
         {
-            Debug.Log("Left Arrow Key is Pressed");
+            _playerLander.addForce((transform.left));
         }
         if (Keyboard.current.rightArrowKey.isPressed)
         {
-            Debug.Log("Right Arrow Key is Pressed");
+            _playerLander.addForce((transform.right));
         }
     }
 }
