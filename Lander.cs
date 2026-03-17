@@ -14,7 +14,7 @@ public class Lander : MonoBehaviour
     {
          if (Keyboard.current.upArrowKey.isPressed)
         {
-            _playerLander.addForce(new Vector2(0,1));
+            _playerLander.addForce(new Vector2(transform.up));
         }
         if (Keyboard.current.downArrowKey.isPressed)
         {
