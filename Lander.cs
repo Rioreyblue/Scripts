@@ -12,21 +12,23 @@ public class Lander : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //  if (Keyboard.current == null) return;
+
          if (Keyboard.current.upArrowKey.isPressed)
         {
-            _playerLander.AddForce((transform.up));
+            _playerLander.AddForce((transform.up * Time.deltaTime));
         }
         if (Keyboard.current.downArrowKey.isPressed)
         {
-            _playerLander.AddForce((transform.down));
+           _playerLander.AddForce((-transform.up * Time.deltaTime));
         }
         if (Keyboard.current.leftArrowKey.isPressed)
         {
-            _playerLander.AddForce((transform.left));
+           _playerLander.AddForce((-transform.right * Time.deltaTime));
         }
         if (Keyboard.current.rightArrowKey.isPressed)
         {
-            _playerLander.AddForce((transform.right));
+           _playerLander.AddForce((transform.right * Time.deltaTime));
         }
     }
 }
